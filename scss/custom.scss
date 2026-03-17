@@ -1,0 +1,69 @@
+@import '../node_modules/bootstrap/scss/functions';
+
+// Colors
+$black: #000;
+$white: #fff;
+$success: #00c950;
+$info: #ff8904;
+$argo-primary: #2184bd;
+
+// Contrast Ratio
+$min-contrast-ratio: 3;
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: 1.25rem,
+  5: $spacer * 3,
+);
+
+// Pagination
+$pagination-color: $argo-primary;
+$pagination-active-bg: $argo-primary;
+$pagination-active-border-color: $argo-primary;
+$pagination-active-color: $white;
+$pagination-hover-color: shade-color($argo-primary, 20%);
+$pagination-hover-bg: tint-color($argo-primary, 90%);
+$pagination-hover-border-color: tint-color($argo-primary, 70%);
+$pagination-focus-box-shadow: 0 0 0 0.25rem rgba($argo-primary, 0.25);
+$pagination-focus-color: shade-color($argo-primary, 20%);
+
+// Nav and Tabs
+$nav-link-color: rgba($black, 0.6);
+$nav-link-hover-color: $black;
+$nav-underline-link-active-color: $argo-primary;
+
+// Button
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1rem;
+$btn-font-weight: 500;
+
+// Input
+$input-padding-y: 0.75rem;
+$input-padding-x: 1rem;
+$input-disabled-color: #6c757d;
+$form-label-font-weight: 600;
+$input-focus-border-color: tint-color($argo-primary, 50%);
+$input-focus-box-shadow: 0 0 0 0.25rem rgba($argo-primary, 0.25);
+
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/variables-dark';
+
+// Add New Color Variables
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'argo-primary': $argo-primary,
+    'argo-primary-subtle': tint-color($argo-primary, 90%),
+  )
+);
+
+@import '../node_modules/bootstrap/scss/maps';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/utilities';
+
+@import '../node_modules/bootstrap/scss/bootstrap';
