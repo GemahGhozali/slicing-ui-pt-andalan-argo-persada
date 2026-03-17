@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/svg/logo.svg" type="image/svg+xml" />
+    <title>Dashboard Logistik | Detail Pemesanan</title>
+
+    <!-- BOOSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+
+    <!-- JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-argo-primary text-white py-0 sticky-top flex-column align-items-stretch">
+      <div class="container-xxl px-4 px-xxl-0 py-4 align-items-center align-items-lg-end">
+        <!-- Logo Perusahaan -->
+        <div class="d-flex justify-content-center align-items-center gap-4">
+          <div class="bg-white rounded-4 d-flex justify-content-center align-items-center" style="width: 70px; height: 70px">
+            <img src="/assets/img/logo.webp" class="w-75 h-75" alt="Logo PT. ANDALAN ARGO PERSADA" />
+          </div>
+          <div class="d-none d-sm-block">
+            <p class="mb-1">Dashboard Logistik</p>
+            <h4 class="mb-0 fw-semibold">PT. ANDALAN ARGO PERSADA</h4>
+          </div>
+        </div>
+
+        <div class="d-flex gap-3">
+          <!-- Profile Dropdown -->
+          <div class="dropdown">
+            <a href="javascript:void(0)" id="profileDropdownToggler" class="d-none d-lg-flex align-items-center gap-2 rounded-5 overflow-hidden dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="bg-body-secondary d-flex justify-content-center align-items-center rounded-circle" style="width: 50px; height: 50px">
+                <img src="/assets/img/avatar-placeholder.png" class="img-fluid" alt="Avatar Placeholder" />
+              </div>
+              <i class="bi bi-caret-down-fill pe-2 text-white"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="/assets/svg/logout-red.svg" alt="logout=red-icon" />
+                  <span class="text-danger">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navbar Toggler -->
+        <button class="navbar-toggler p-0 border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+          <i class="bi bi-list fs-1 text-white"></i>
+        </button>
+      </div>
+
+      <hr class="mt-0 mb-4 border-white opacity-100 d-none d-lg-block" />
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+        <!-- Offcanvas Navbar Header -->
+        <div class="offcanvas-header flex-column align-items-stretch border-bottom border-secondary-subtle">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <!-- Logo Perusahaan -->
+            <div class="bg-white border border-secondary-subtle rounded-4 d-flex justify-content-center align-items-center" style="width: 70px; height: 70px">
+              <img src="/assets/img/logo.webp" class="w-75 h-75" alt="Logo PT. ANDALAN ARGO PERSADA" />
+            </div>
+            <!-- Close Button -->
+            <button type="button" class="btn-close p-3 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <h5 class="fw-semibold mb-0">PT. ANDALAN ARGO PERSADA</h5>
+          <p class="text-secondary mb-0">Dashboard Logistik</p>
+        </div>
+        <!-- Offcanvas Navbar Body -->
+        <div class="offcanvas-body">
+          <!-- Navbar Navigation Link -->
+          <ul class="navbar-nav gap-4 gap-lg-5 container-xxl px-0 px-lg-4 px-xxl-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../data-pemesanan.html">Data Pemesanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../delivery-order/delivery-order.html">Delivery Order</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Offcanvas Navbar Footer -->
+        <div class="p-3 d-lg-none border-top border-secondary-subtle">
+          <a href="#" class="btn btn-danger w-100">
+            <img src="/assets/svg/logout-white.svg" alt="logout-white-icon" />
+            <span class="ms-2">Logout</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-xxl px-3 pb-3 pt-5 px-sm-4 pb-sm-4 px-xxl-0 py-xxl-5">
+      <section>
+        <!-- Section Heading -->
+        <h4 class="fw-bold">Detail Pemesanan</h4>
+        <p class="mb-4 fw-medium text-secondary">No. 0083/PO-HZN/MKH/01/2026</p>
+
+        <!-- Tabs -->
+        <div class="overflow-x-auto scrollbar-hidden">
+          <ul class="nav nav-underline flex-nowrap" style="gap: 2rem">
+            <li class="nav-item flex-shrink-0">
+              <a class="nav-link active" href="detail-pemesanan-informasi-umum.html">Informasi Umum</a>
+            </li>
+            <li class="nav-item flex-shrink-0">
+              <a class="nav-link" href="detail-pemesanan-list-barang.html">List Barang</a>
+            </li>
+            <li class="nav-item flex-shrink-0">
+              <a class="nav-link" href="detail-pemesanan-delivery-order.html">Delivery Order</a>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="mt-0" style="margin-bottom: 32px" />
+
+        <!-- Informasi Umum -->
+        <div class="row g-4 mb-5">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div>
+              <h6 class="fw-semibold">No. Pemesanan</h6>
+              <p class="text-secondary">0083/PO-HZN/MKH/01/2026</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div>
+              <h6 class="fw-semibold">Tanggal Pemesanan</h6>
+              <p class="text-secondary">Rabu, 26 April 2026</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div>
+              <h6 class="fw-semibold">Status Pemesanan</h6>
+              <span class="badge rounded-pill bg-secondary-subtle text-secondary fw-medium mb-3">Dibuat</span>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div>
+              <h6 class="fw-semibold">Group</h6>
+              <p class="text-secondary">Group Name</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div>
+              <h6 class="fw-semibold">Company</h6>
+              <p class="text-secondary">Company Name</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div>
+              <h6 class="fw-semibold">Alamat Pengiriman</h6>
+              <p class="text-secondary">JL. MT Haryono Perumahan Bukit Meditrania...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
